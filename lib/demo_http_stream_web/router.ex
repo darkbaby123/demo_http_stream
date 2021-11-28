@@ -7,6 +7,8 @@ defmodule DemoHttpStreamWeb.Router do
 
   scope "/api", DemoHttpStreamWeb do
     pipe_through :api
+
+    get "/stream", DemoController, :stream
   end
 
   # Enables LiveDashboard only for development
