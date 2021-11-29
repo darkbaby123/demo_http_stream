@@ -9,17 +9,6 @@ defmodule DemoHttpStream.Receiver2 do
     receive_and_stream_next(conn, req_ref)
   end
 
-  # {:ok, conn, resps} = DemoHttpStream.Receiver2.receive_next(conn)
-  def receive_next(conn) do
-    receive do
-      message ->
-        Mint.HTTP.stream(conn, message)
-    after
-      300 ->
-        IO.inspect("Timeout")
-    end
-  end
-
   defp receive_and_stream_next(conn, req_ref) do
     IO.puts("Receive conn:")
 
