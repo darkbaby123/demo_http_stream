@@ -1,19 +1,18 @@
 # DemoHttpStream
 
-To start your Phoenix server:
+A demo to demonstrate how to implement HTTP stream API. It contains:
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+1. An HTTP stream API implemented by Phoenix, check `DemoHttpStreamWeb.DemoController`
+2. Some stream receivers implemented by different HTTP library. check `DemoHttpStream.ReceiverX`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Start stream API server
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+```bash
+mix phx.server
+```
 
-## Learn more
+## Start stream receiver
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+```bash
+mix run -e "DemoHttpStream.receiver1.run()"
+```
