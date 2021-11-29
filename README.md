@@ -16,3 +16,11 @@ mix phx.server
 ```bash
 mix run -e "DemoHttpStream.receiver1.run()"
 ```
+
+## Useful resources (but not related)
+
+- https://httpbin.org
+  A service for testing different HTTP request & responses. I can test stream via `GET /stream/{n}` but seems each HTTP chunk is splitted by data but not JSON string.
+
+- https://badssl.com
+  A service for testing SSL.
